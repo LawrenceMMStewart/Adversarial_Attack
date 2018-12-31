@@ -195,7 +195,7 @@ def main():
         test(args, model, device, test_loader)
 
     if (args.save_model):
-        torch.save(model.state_dict(),"mnist_cnn.pt")
+        torch.save(model.state_dict(),"Stored_Weights/LeNet_Weights.pt")
         
 if __name__ == '__main__':
     main()

@@ -26,7 +26,7 @@ import matplotlib.pyplot as plt
 #load pretrained model 
 #-- c h a n g e   t h i s   t o    y o u r    s h o r t c u t 
 
-lenet="/Users/lawrence/Desktop/mnist_cnn.pt"
+lenet="/Users/lawrence/Desktop/DLProject/Stored_Weights/LeNet_Weights.pt"
 use_cuda=False
 
 
@@ -226,6 +226,9 @@ if __name__ == '__main__':
 	#4) save results:
 	save_im_op=True
 
+	#5) show plots:
+	show_plt_op=False
+
 
 
 
@@ -236,7 +239,7 @@ if __name__ == '__main__':
 
 
 	#directory to save images to:
-	im_direc="/Users/lawrence/Desktop/DLProject/Images"
+	im_direc="LeNetImages/"
 	
 
 
@@ -277,8 +280,8 @@ if __name__ == '__main__':
 			
 		if displ_op:
 			cnt = 0
-			plt.figure(figsize=(8,10))
-			plt.suptitle("Generated Adversarial Images ")
+			plt.figure(figsize=(12,19))
+			plt.suptitle("Generated Adversarial Images", fontsize=10)
 			for i in range(len(epsilon_vals)):
 				for j in range(len(examples[i])):
 					cnt += 1
@@ -286,7 +289,7 @@ if __name__ == '__main__':
 					plt.xticks([], [])
 					plt.yticks([], [])
 					if j == 0:
-						plt.ylabel("Eps: {}".format(epsilon_vals[i]), fontsize=14)
+						plt.ylabel("Eps,Acc: {}".format((epsilon_vals[i],accuracies[i])), fontsize=10)
 					orig,adv,ex = examples[i][j]
 					plt.title("{} -> {}".format(orig, adv))
 					plt.imshow(ex, cmap="gray")
@@ -298,3 +301,31 @@ if __name__ == '__main__':
 			if save_im_op:
 				plt.savefig(im_direc + 'Generated_adversarials.png', dpi = 300)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#  _   _       _            
+# | \ | |     | |           
+# |  \| | ___ | |_ ___  ___ 
+# | . ` |/ _ \| __/ _ \/ __|
+# | |\  | (_) | ||  __/\__ \
+# |_| \_|\___/ \__\___||___/
+                          
+                          
+
+# the structure of examples is a list of eps elemenets
+
+#take the any element (is actually a tuple where), the first element is the number that it is
+#(i.e its mnist number, then the second number is the misidentification.) the 3rd element is
+#the image a 28x28 array.
