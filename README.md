@@ -2,9 +2,18 @@
 
 The following project implements FGSM attacks on the neural networks Lenet5 and Alexnet in Pytorch.
 
-<img src="https://github.com/LawrenceMMStewart/Adversarial_Attack/blob/master/AlexNet_Adversarial_Images/targeted_adv_img_from_'seashore%2C%20coast%2C%20seacoast%2C%20sea-coast'%2C_%20to_'harvestman%2C%20daddy%20longlegs%2C%20Phalangium%20opilio'%2C.jpg" width="450">
 
-<img src="https://github.com/LawrenceMMStewart/Adversarial_Attack/blob/master/AlexNet_Adversarial_Images/targeted_adv_noise_from_'seashore%2C%20coast%2C%20seacoast%2C%20sea-coast'%2C_to_'harvestman%2C%20daddy%20longlegs%2C%20Phalangium%20opilio'%2C.jpg" width="450">
+Example: An image originally classified as a beach by Alexnet:
+
+<img src="https://github.com/LawrenceMMStewart/Adversarial_Attack/blob/master/Alex_net_input_images/beach.JPEG" width="350">
+
+Which is attacked by the following adversarial pertubation:
+
+<img src="https://github.com/LawrenceMMStewart/Adversarial_Attack/blob/master/AlexNet_Adversarial_Images/targeted_adv_noise_from_'seashore%2C%20coast%2C%20seacoast%2C%20sea-coast'%2C_to_'harvestman%2C%20daddy%20longlegs%2C%20Phalangium%20opilio'%2C.jpg" width="350">
+
+will now be classified as a Daddy Long Legs:
+
+img src="https://github.com/LawrenceMMStewart/Adversarial_Attack/blob/master/AlexNet_Adversarial_Images/targeted_adv_img_from_'seashore%2C%20coast%2C%20seacoast%2C%20sea-coast'%2C_%20to_'harvestman%2C%20daddy%20longlegs%2C%20Phalangium%20opilio'%2C.jpg" width="450">
 
 
 # Contents 
